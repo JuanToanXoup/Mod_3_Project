@@ -3,7 +3,7 @@ let timer = 0;
 const progress = (timeleft, timetotal, $element)=>{
     stop();
     var progressBarWidth = timeleft * $element.width() / timetotal;
-    $element.find('div').animate({ width: progressBarWidth }, 500);
+    $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
     if(timeleft > 0) {
         timer = setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
