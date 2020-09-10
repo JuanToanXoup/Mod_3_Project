@@ -114,7 +114,8 @@ let toIndex = (x, y)=>{
 	return((y * mapW) + x);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+const loadGame = () => {
+	toggleElements();
 	ctx = document.getElementById('game').getContext("2d");
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
@@ -133,7 +134,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			e.keyCode==83 || 
 			e.keyCode==65 || 
 			e.keyCode==68) { keysDown[e.keyCode] = true; }
-		if(e.keyCode==9) {questionGen();}
+		if(e.keyCode==9) {skipQuest();}
 		if(e.keyCode==37){player.direction = directions.left}
 		if(e.keyCode==38){player.direction = directions.up}
 		if(e.keyCode==39){player.direction = directions.right}
@@ -160,7 +161,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	};
 	tileset.onload = function() { tilesetLoaded = true; };
 	tileset.src = tilesetURL;
-});
+};
 
 let drawGame = ()=> {
 	if(ctx==null) { return; }

@@ -6,8 +6,6 @@ body {
     margin: 0;
     --nav-load-time: 300ms;
     --nav-link-load-time: 500ms;
-    /* --problem-load-delay: calc(var(--nav-load-time) + 
-        var(--nav-link-load-time)) */
 }
 
 nav {
@@ -42,14 +40,7 @@ nav h1:last-child {
 main {
     padding: 5px;
 }
-/* 
-h2 {
-    animation: problem-load 300ms ease-in var
-    (--problem-load-delay);
-    animation-fill-mode: forwards;
-    transform: translateY(-20px);
-    opacity: 0;
-} */
+
 
 @keyframes nav-load {
     0% {
@@ -105,18 +96,7 @@ h2 {
         transform: translateX(0);
     }
 }
-/* 
-@keyframes problem-load {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-} */
 
 .flexboxHeader {
     height: 250x;
@@ -134,6 +114,8 @@ h2 {
 }
 
 .containerQuestion {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
     width: 300px;
     margin: 10px;
     border: 3px solid rgb(3, 8, 10);
@@ -144,6 +126,8 @@ h2 {
 }
 
 .containerAnswer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
     width: 300px;
     margin: 10px;
     border: 3px solid rgb(3, 8, 10);
@@ -199,6 +183,7 @@ h2 {
 }
 
 #progressBar {
+    width: 800px;
     margin: 10px auto;
     height: 80px;
     background-color: #0A5F44;

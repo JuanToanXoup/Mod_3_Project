@@ -57,6 +57,11 @@ const checkAns = ()=>{
     }
 }
 
+const skipQuest = ()=> {
+    progress(getSeconds()-5, 120, $('#progressBar'));
+    questionGen();
+}
+
 const reset = ()=>{
     progress(120, 120, $('#progressBar'));
     questionGen();

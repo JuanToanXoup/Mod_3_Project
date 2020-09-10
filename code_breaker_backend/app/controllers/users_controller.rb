@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def index
+        users = User.all
+        render json: users, only: [:id,:username, :avatar]
+    end
 
     def show
         user = find_user
@@ -6,8 +10,12 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user.avatar.attach(io: File.open('app/assets/images/placeholder.png'),
-        filename: 'placeholder.png', content_type: 'image/png')
+        user = User.find_by(user_params)
+        if user == nil
+            user = User.new(user_params)
+            user.save
+        end
+        render json: user, only: [:id,:username, :avatar]
     end
 
     private
