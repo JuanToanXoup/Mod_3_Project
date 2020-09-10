@@ -1,18 +1,11 @@
-// function progress(timeleft, timetotal, $element) {
-//     var progressBarWidth = timeleft * $element.width() / timetotal;
-//     $element.find('div').animate({ width: progressBarWidth }, 500).html(Math.floor(timeleft/60) + ":"+ timeleft%60);
-//     if(timeleft > 0) {
-//         setTimeout(function() {
-//             progress(timeleft - 1, timetotal, $element);
-//         }, 1000);
-//     }
-// };
+let timer = 0;
 
-function progress(timeleft, timetotal, $element) {
+const progress = (timeleft, timetotal, $element)=>{
+    stop();
     var progressBarWidth = timeleft * $element.width() / timetotal;
     $element.find('div').animate({ width: progressBarWidth }, 500);
     if(timeleft > 0) {
-        setTimeout(function() {
+        timer = setTimeout(function() {
             progress(timeleft - 1, timetotal, $element);
         }, 1000);
     }
@@ -21,5 +14,14 @@ function progress(timeleft, timetotal, $element) {
     }
 };
 
-// progress(20, 20, $('#progressBar'));
+const getSeconds = ()=>{
+    secondsArray = document.querySelector('.bar').innerText.split(':');
+    return seconds = Number(secondsArray[0])*60 + Number(secondsArray[1]);
+}
 
+const stop = ()=> {
+    if (timer) {
+        clearTimeout(timer);
+        timer = 0;
+    }
+}

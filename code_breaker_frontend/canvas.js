@@ -2,17 +2,17 @@
 let ctx = null;
 let holdNum = null;
 let gameMap = [
-	2, 10, 10, 10, 2, 2, 10, 10, 10, 2,
+	11, 10, 10, 10, 13, 14, 10, 10, 10, 12,
 	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+	15, 10, 10, 10, 10, 10, 10, 10, 10, 10,
 	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-	0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+	0, 10, 2, 10, 4, 10, 6, 10, 8, 10,
+	10, 1, 10, 3, 10, 5, 10, 7, 10, 9
 ];
 let tileW = 80, tileH = 80;
 let mapW = 10, mapH = 6;
 let currentSecond = 0, frameCount = 0, framesLastSecond = 0, lastFrameTime = 0;
-let tileset = null, tilesetURL = "tileset3.png", tilesetLoaded = false;
+let tileset = null, tilesetURL = "tileset6.png", tilesetLoaded = false;
 
 let keysDown = {
 	37 : false, 38 : false, 39 : false,
@@ -41,8 +41,10 @@ let tileTypes = {
 	9 : { sprite:[{x:120,y:40,w:40,h:40}] },
 	10 : { sprite:[{x:160,y:40,w:40,h:40}] },
 	11 : { sprite:[{x:200,y:40,w:40,h:40}] },
-	12 : { sprite:[{x:160,y:40,w:40,h:40}] },
-	13 : { sprite:[{x:160,y:40,w:40,h:40}] },
+	12 : { sprite:[{x:240,y:0,w:40,h:40}] },
+	13 : { sprite:[{x:280,y:0,w:40,h:40}] },
+	14 : { sprite:[{x:320,y:0,w:40,h:40}] },
+	15 : { sprite:[{x:240,y:40,w:40,h:40}] },
 };
 
 let directions = {
@@ -53,7 +55,6 @@ let directions = {
 };
 
 let player = new Character();
-// let player2 = new Character();
 
 function Character()
 {
@@ -118,9 +119,10 @@ window.addEventListener("DOMContentLoaded", () => {
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
 	questionGen();
-	progress(200, 200, $('#progressBar'));
+
+	progress(120, 120, $('#progressBar'));
+
 	player.placeAt(3,2);
-	// player2.placeAt(6,2);
 
 	window.addEventListener("keydown", (e) => {
 		e.preventDefault();
@@ -186,17 +188,6 @@ let drawGame = ()=> {
 		{ player.timeMoved = currentFrameTime; } //timeMoved is the exact time the player started moving//
 	}
 
-	// if(!player2.processMovement(currentFrameTime))
-	// {
-	// 	if(keysDown[87] && player2.tileFrom[1]>0 && gameMap[toIndex(player2.tileFrom[0], player2.tileFrom[1]-1)]==1) { player2.tileTo[1]-= 1; }
-	// 	else if(keysDown[83] && player2.tileFrom[1]<(mapH-1) && gameMap[toIndex(player2.tileFrom[0], player2.tileFrom[1]+1)]==1) { player2.tileTo[1]+= 1; }
-	// 	else if(keysDown[65] && player2.tileFrom[0]>0 && gameMap[toIndex(player2.tileFrom[0]-1, player2.tileFrom[1])]==1) { player2.tileTo[0]-= 1; }
-	// 	else if(keysDown[68] && player2.tileFrom[0]<(mapW-1) && gameMap[toIndex(player2.tileFrom[0]+1, player2.tileFrom[1])]==1) { player2.tileTo[0]+= 1; }
-
-	// 	if(player2.tileFrom[0]!=player2.tileTo[0] || player2.tileFrom[1]!=player2.tileTo[1])
-	// 	{ player2.timeMoved = currentFrameTime; } //timeMoved is the exact time the player started moving//
-	// }
-
 	for(let y = 0; y < mapH; ++y)
 	{
 		for(let x = 0; x < mapW; ++x)
@@ -216,6 +207,7 @@ let drawGame = ()=> {
 		player.position[0],player.position[1],
 		player.dimensions[0], player.dimensions[1]
 	);
+
 	// ctx.fillStyle = "#0000ff";
 	// ctx.fillRect(player.position[0], player.position[1],
 	// 	player.dimensions[0], player.dimensions[1]);
@@ -231,23 +223,24 @@ let drawGame = ()=> {
 	requestAnimationFrame(drawGame);
 
 	if (keysDown[32]){
-		const position = player.position.toString();
+		const position = gameMap[toIndex(player.tileFrom[0],player.tileFrom[1])]
 		switch(position)
 		{
-			case "10,410": holdNum = 0; console.log(0); break;
-			case "90,410": holdNum = 1; console.log(1); break;
-			case "170,410": holdNum = 2; console.log(2); break;
-			case "250,410": holdNum = 3; console.log(3); break;
-			case "330,410": holdNum = 4; console.log(4); break;
-			case "410,410": holdNum = 5; console.log(5); break;
-			case "490,410": holdNum = 6; console.log(6); break;
-			case "570,410": holdNum = 7; console.log(7); break;
-			case "650,410": holdNum = 8; console.log(8); break;
-			case "730,410": holdNum = 9; console.log(9); break;
-			case "10,10": ansReset(); console.log("RESET"); break;
-			case "330,10": if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
-			case "410,10": if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
-			case "730,10": checkAns();
+			case 0: holdNum = 0; console.log(0); break;
+			case 1: holdNum = 1; console.log(1); break;
+			case 2: holdNum = 2; console.log(2); break;
+			case 3: holdNum = 3; console.log(3); break;
+			case 4: holdNum = 4; console.log(4); break;
+			case 5: holdNum = 5; console.log(5); break;
+			case 6: holdNum = 6; console.log(6); break;
+			case 7: holdNum = 7; console.log(7); break;
+			case 8: holdNum = 8; console.log(8); break;
+			case 9: holdNum = 9; console.log(9); break;
+			case 11: ansReset(); console.log("RESET"); break;
+			case 13: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
+			case 14: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
+			case 12: checkAns();
+			case 15: holdNum = "-"; break;
 			default: break;
 		}
 	}
