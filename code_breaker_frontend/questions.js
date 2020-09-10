@@ -12,11 +12,11 @@ const questionGen = ()=>{
     switch(random){
         case 1 :
             questionBox.innerText = `${num1} + ${num2} = X`
-            answer = Number(`${num1}${num2}`) + Number(`${num3}${num4}`)
+            answer = Number(`${num1}`) + Number(`${num2}`)
             break;
         case 2 :
             questionBox.innerText = `${num1} - ${num2} = X`
-            answer = Number(`${num1}${num2}`) + Number(`${num3}${num4}`)
+            answer = Number(`${num1}`) - Number(`${num2}`)
             break; 
         case 3 :
             questionBox.innerText = `${num1}${num2} + ${num3}${num4} = X`
@@ -24,7 +24,7 @@ const questionGen = ()=>{
             break;
         case 4 :
             questionBox.innerText = `${num1}${num2} - ${num3}${num4} = X`
-            answer = Number(`${num1}${num2}`) + Number(`${num3}${num4}`)
+            answer = Number(`${num1}${num2}`) - Number(`${num3}${num4}`)
             break;    
         case 5 : 
             questionBox.innerText = `${num1} x ${num2} = X`
@@ -55,5 +55,9 @@ const checkAns = ()=>{
         console.log("Wrong Answer")
         ansReset();
     }
+}
 
+const reset = ()=>{
+    progress(120, 120, $('#progressBar'));
+    questionGen();
 }

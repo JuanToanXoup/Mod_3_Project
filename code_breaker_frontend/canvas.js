@@ -136,6 +136,7 @@ window.addEventListener("DOMContentLoaded", () => {
 		if(e.keyCode==38){player.direction = directions.up}
 		if(e.keyCode==39){player.direction = directions.right}
 		if(e.keyCode==40){player.direction = directions.down}
+		if(e.keyCode==27){reset();}
 
 	});
 	window.addEventListener("keyup", (e) => {
