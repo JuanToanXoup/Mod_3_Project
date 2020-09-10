@@ -20,7 +20,8 @@
 }
 
 #title {
-    width: 60%;
+    width: 800px;
     margin: 10px auto;
     height: 50px;
+    text-align: center;
 }

@@ -4,7 +4,7 @@ let holdNum = null;
 let gameMap = [
 	11, 10, 10, 10, 13, 14, 10, 10, 10, 12,
 	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+	15, 10, 10, 10, 10, 10, 10, 10, 10, 10,
 	10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
 	0, 10, 2, 10, 4, 10, 6, 10, 8, 10,
 	10, 1, 10, 3, 10, 5, 10, 7, 10, 9
@@ -44,6 +44,7 @@ let tileTypes = {
 	12 : { sprite:[{x:240,y:0,w:40,h:40}] },
 	13 : { sprite:[{x:280,y:0,w:40,h:40}] },
 	14 : { sprite:[{x:320,y:0,w:40,h:40}] },
+	15 : { sprite:[{x:240,y:40,w:40,h:40}] },
 };
 
 let directions = {
@@ -226,6 +227,7 @@ let drawGame = ()=> {
 			case 13: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
 			case 14: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
 			case 12: checkAns();
+			case 15: holdNum = "-"; break;
 			default: break;
 		}
 	}
