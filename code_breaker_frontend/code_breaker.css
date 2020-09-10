@@ -4,8 +4,8 @@
 
 body {
     margin: 0;
-    --nav-load-time: 300ms;
-    --nav-link-load-time: 500ms;
+    --nav-load-time: 900ms;
+    --nav-link-load-time: 300ms;
 }
 
 nav {
@@ -40,7 +40,6 @@ nav h1:last-child {
 main {
     padding: 5px;
 }
-
 
 @keyframes nav-load {
     0% {
@@ -165,6 +164,23 @@ main {
     background-color: #fff;
     animation: loader-inner 2s infinite ease-in;
 }
+
+.grandParentContaniner {
+    display: flex;
+    justify-content: center;
+
+}
+
+.field-has-addons {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: 300px;
+    border: 5px solid rgb(3, 8, 10);
+    background-color: #dfdfdf;
+    border-radius: 5em;
+}
+
 
 @keyframes loader {
     0% { transform: rotate(0deg);}
