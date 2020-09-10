@@ -1,16 +1,218 @@
+.background {
+    background-color: rgb(43, 44, 44);
+}
+
+body {
+    margin: 0;
+    --nav-load-time: 300ms;
+    --nav-link-load-time: 500ms;
+    /* --problem-load-delay: calc(var(--nav-load-time) + 
+        var(--nav-link-load-time)) */
+}
+
+nav {
+    background-color: rgb(3, 8, 10);
+    color: rgb(0, 255, 42);
+    animation: nav-load var(--nav-load-time) ease-in;
+}
+
+nav h1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 5px;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: var(--nav-load-time);
+    animation-fill-mode: forwards;
+    transform: scale(0)
+}
+
+nav h1:first-child {
+    animation-name: nav-last-link-load;
+    transform: translateX(1000)
+}
+
+nav h1:last-child {
+    animation-name: nav-first-link-load;
+    transform: translateX(-1000)
+}
+
+main {
+    padding: 5px;
+}
+/* 
+h2 {
+    animation: problem-load 300ms ease-in var
+    (--problem-load-delay);
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+} */
+
+@keyframes nav-load {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes nav-link-load {
+    0% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes nav-first-link-load {
+    0% {
+        transform: translateX(-1000);
+    }
+
+    90% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes nav-last-link-load {
+    0% {
+        transform: translateX(1000);
+    }
+
+    90% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+/* 
+@keyframes problem-load {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+} */
+
+.flexboxHeader {
+    height: 250x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.flexboxMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerQuestion {
+    width: 300px;
+    margin: 10px;
+    border: 3px solid rgb(3, 8, 10);
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+
+}
+
+.containerAnswer {
+    width: 300px;
+    margin: 10px;
+    border: 3px solid rgb(3, 8, 10);
+    background-color: #dfdfdf;
+    display: flex;
+    justify-content: center;
+}
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(236, 9, 9);;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+}
+
 #progressBar {
     width: 90%;
     margin: 10px auto;
-    height: 22px;
+    height: 80px;
     background-color: #0A5F44;
+    border-radius: 10em
 }
-  
+
 #progressBar div {
     height: 100%;
     text-align: right;
-    padding: 0 10px;
-    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    padding: 0 0px;
+    line-height: 80px;
     width: 0;
-    background-color: #CBEA00;
+    background-color: rgb(0, 255, 42);
     box-sizing: border-box;
+    border-radius: 10em;
 }

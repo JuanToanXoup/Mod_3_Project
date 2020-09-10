@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
 	questionGen();
-	progress(600, 600, $('#progressBar'));
+	progress(200, 200, $('#progressBar'));
 	player.placeAt(3,2);
 	// player2.placeAt(6,2);
 
@@ -224,7 +224,7 @@ let drawGame = ()=> {
 	// 	player2.dimensions[0], player2.dimensions[1]);
 
 	// ctx.fillStyle = "#ff0000";
-	ctx.fillText("FPS: " + framesLastSecond, 10, 20);
+	// ctx.fillText("FPS: " + framesLastSecond, 10, 20);
 
 
 	lastFrameTime = currentFrameTime;
