@@ -176,3 +176,270 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 52ms (Views: 3.3ms | ActiveRecord: 1.5ms | Allocations: 5102)
 
 
+Started POST "/users" for ::1 at 2020-09-10 16:52:28 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", ""], ["created_at", "2020-09-10 21:52:28.611668"], ["updated_at", "2020-09-10 21:52:28.611668"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 5.1ms | Allocations: 6848)
+
+
+Started POST "/users" for ::1 at 2020-09-10 16:55:47 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 937)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:01:05 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 922)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:01:09 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 922)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:01:21 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 89ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 925)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:01:29 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:03:36 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:32:02 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 25ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 921)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:34:51 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:36:30 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:36:56 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:41:45 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:42:19 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:43:32 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 17:44:55 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:07:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 921)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:11:34 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:16:27 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:18:33 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:20:00 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:22:41 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:24:26 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:28:51 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:29:51 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:31:09 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:32:54 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:36:35 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:36:57 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:37:47 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:39:06 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 905)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:44:59 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 921)
+
+
+Started POST "/users" for ::1 at 2020-09-10 18:46:10 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"", "user"=>{"username"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `create'
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 905)
+
+
