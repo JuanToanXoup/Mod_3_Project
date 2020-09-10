@@ -118,7 +118,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
 	questionGen();
-	progress(600, 600, $('#progressBar'));
+	progress(120, 120, $('#progressBar'));
 	player.placeAt(3,2);
 
 	window.addEventListener("keydown", (e) => {
