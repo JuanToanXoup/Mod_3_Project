@@ -22,11 +22,13 @@ const checkAns = ()=>{
     let submit = Number(answerBox.innerText.split('=')[1]);
     if(submit === answer){
         //increase score
+        progress(getSeconds()+10, 120, $('#progressBar'));
         console.log('CONGRATS')
         questionGen();
     }else if(submit == ''){
         return
     }else{
+        progress(getSeconds()-10, 120, $('#progressBar'));
         console.log("Wrong Answer")
         ansReset();
     }
