@@ -119,7 +119,9 @@ window.addEventListener("DOMContentLoaded", () => {
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
 	questionGen();
+
 	progress(120, 120, $('#progressBar'));
+
 	player.placeAt(3,2);
 
 	window.addEventListener("keydown", (e) => {
@@ -205,6 +207,17 @@ let drawGame = ()=> {
 		player.position[0],player.position[1],
 		player.dimensions[0], player.dimensions[1]
 	);
+
+	// ctx.fillStyle = "#0000ff";
+	// ctx.fillRect(player.position[0], player.position[1],
+	// 	player.dimensions[0], player.dimensions[1]);
+	// ctx.fillStyle = "#DF22F9 ";
+	// ctx.fillRect(player2.position[0], player2.position[1],
+	// 	player2.dimensions[0], player2.dimensions[1]);
+
+	// ctx.fillStyle = "#ff0000";
+	// ctx.fillText("FPS: " + framesLastSecond, 10, 20);
+
 
 	lastFrameTime = currentFrameTime;
 	requestAnimationFrame(drawGame);

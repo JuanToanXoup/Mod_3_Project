@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		
 		<link rel="stylesheet" href="code_breaker.css">
 		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="canvas.js" defer></script>
 		<script type="text/javascript" src="questions.js" defer></script>
 		<script type="text/javascript" src="progress_bar.js" defer></script>
 	</head>
-	
 	<body>
-		<div id="title">
-			<h1> CODE BREAKER </h1>
-			<div id="questionTitleStyle">
-				<h2> Question </h2>
+		<div class="background">
+			<header>
+				<nav>
+					<h1> CODE </h1>
+					<h1> BREAKER </h1>
+				</nav>
+			</header>
+			<div class="flexboxHeader">
+				<div class="containerQuestion">
+					<h2> Question: </h2>
+					<h2 id="question"> </h2>
+				</div>
+				<div class="containerAnswer">
+					<h2 id="answer">  </h2>
+				</div>
 			</div>
+			<main>
+				<section>
+					<div class="flexboxMap">
+						<canvas id="game" width="800" height="490"></canvas>
+					</div>
 
-			<div id="questionStyle">
-				<h3 id="question"> </h3>
-			</div>
+					<div id="progressBar">
+							<div class="bar"></div>
+					</div>
 
-			<div id="answerStyle"></div>
-				<h3 id="answer"> </h3>
-			<div id=""></div>
-		
-		<div id="progressBar">
-			<div class="bar"></div>
-		</div>
-		<div id="gameStyle">
-			<canvas id="game" width="800" height="800"></canvas>
-		</div>
+					<div class="loader-wrapper">
+						<span class="loader"><span class="loader-inner"></span></span>
+					</div>
+					<script type="text/javascript" src="screen_loader.js"></script>
+				</section>
+			</main>
 		</div>
 	</body>
-
 </html>
