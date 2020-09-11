@@ -40,6 +40,7 @@ const toggleMusic = (sound)=>{
 }
 
 const slapUser= (user)=>{
+  debugger
   localStorage.id = user.id
   localStorage.highscore = user.highscore
   document.getElementById('userDisplay').innerText = user.username;
