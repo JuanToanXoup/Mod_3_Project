@@ -14,6 +14,7 @@
       .then(user => {
           console.log(user.id)
           loadGame();
+          toggleMusic('theme');
       })
     })
   });
@@ -29,4 +30,9 @@ const toggleElements = ()=>{
     document.querySelector("body > div.flexboxHeader").style.display = style;
     document.querySelector("body > main > section > div.flexboxMap").style.display = style;
     document.querySelector("#progressBar").style.display = style;
+}
+
+const toggleMusic = (sound)=>{
+        document.getElementById(sound).volume = 0.15;
+        document.getElementById(sound).load();
 }

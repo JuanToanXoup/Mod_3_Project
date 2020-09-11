@@ -43,14 +43,16 @@ const ansReset = ()=>{
 
 const checkAns = ()=>{
     let submit = Number(answerBox.innerText.split('=')[1]);
+    let rand = Math.floor(Math.random() * 2) + 1 
     if(submit === answer){
         //increase score
+        toggleMusic(`correct${rand}`)
         progress(getSeconds()+10, 120, $('#progressBar'));
-        console.log('CONGRATS')
         questionGen();
     }else if(submit == ''){
         return
     }else{
+        toggleMusic(`wrong1`);
         progress(getSeconds()-10, 120, $('#progressBar'));
         console.log("Wrong Answer")
         ansReset();

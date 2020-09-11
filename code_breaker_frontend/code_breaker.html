@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="code_breaker.css">
 		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="login.js" defer></script>
@@ -17,8 +17,11 @@
 	<body>
 		<header>
 			<nav>
-				<h1> QUEST </h1>
-				<h1> KEY </h1>
+				<h1>
+					<a>
+						<img src="title.png" width="435" height="175" alt="Quest & Key" />
+					</a>
+				</h1>
 			</nav>
 		</header>
 
@@ -52,7 +55,9 @@
 				</div>
 
 				<div id="progressBar">
-						<div class="bar"></div>
+						<div class="bar">
+							<img src="pig.png" alt="Italian Trulli">
+						</div>
 				</div>
 
 				<div class="loader-wrapper">
@@ -61,5 +66,38 @@
 				<script type="text/javascript" src="screen_loader.js"></script>
 			</section>
 		</main>
+		<div id="audio-files">
+			<audio id="theme" controls autoplay loop style = "display:none">  
+				<source src="audio/theme.mp3" type="audio/ogg">  
+			</audio> 
+			<audio id="correct1" controls autoplay style="display:none">
+				<source src="audio/correct1.mp3" type="audio/ogg">
+			</audio>
+			<audio id="correct2" controls autoplay style="display:none">
+				<source src="audio/correct2.mp3" type="audio/ogg">
+			</audio>
+			<audio id="wrong1" controls autoplay style="display:none">
+				<source src="audio/wrong1.mp3" type="audio/ogg">
+			</audio>
+			<audio id="dropkey1" controls autoplay style="display:none">
+				<source src="audio/dropkey1.mp3" type="audio/ogg">
+			</audio>
+			<audio id="dropkey2" controls autoplay style="display:none">
+				<source src="audio/dropkey2.mp3" type="audio/ogg">
+			</audio>
+			<audio id="key1" controls autoplay style="display:none">
+				<source src="audio/key1.mp3" type="audio/ogg">
+			</audio>
+			<audio id="key2" controls autoplay style="display:none">
+				<source src="audio/key2.mp3" type="audio/ogg">
+			</audio>
+			<audio id="key3" controls autoplay style="display:none">
+				<source src="audio/key3.mp3" type="audio/ogg">
+			</audio>
+			<audio id="reset" controls autoplay style="display:none">
+				<source src="audio/reset.mp3" type="audio/ogg">
+			</audio>
+		</div>
 	</body>
+	
 </html>
