@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="canvas.js" defer></script>
 		<script type="text/javascript" src="questions.js" defer></script>
 		<script type="text/javascript" src="progress_bar.js" defer></script>
+		<script type="text/javascript" src="score.js" defer></script>
 	</head>
 	<style>
 		body {
@@ -29,35 +30,44 @@
 			<div class="parentContainer">
 				<form id="user-login" accept-charset="utf-8">
 					<div class="field-has-addons">
-						<h2> Enter Your Traveler </h2>
 						<div class="control">
-							<input type="text" name="username" class="input" id="username" placeholder="Enter Your Name" autocomplete="off">
+							<input type="text" name="username" class="input" id="username" placeholder="Traveler Name" autocomplete="off" >
 						</div>
-						<div class="control">
-							<input type="submit" name="submit" class="button is-primary" id="submit" value="Submit">
-						</div>
+					</div>
+					<div class="control">
+							<input type="submit" name="submit" class="button is-primary" id="submit" value="Submit" >
 					</div>
 				</form>
 			</div>
 		</div>
-		
-		<div class="flexboxHeader">
-			<div class="containerQuestion">
-				<h2 id="question"> </h2>
+		<div class="flexboxMap" style = "display:none">
+			<div class="flexboxHeader" style = "display:none">
+				<div class="scoreContainer">
+					<h2 id="score"> </h2>
+				</div>
+				<div class="containerQuestion">
+					<h2 id="question"> </h2>
+				</div>
+				<div class="containerAnswer">
+					<h2 id="answer">  </h2>
+				</div>
 			</div>
-			<div class="containerAnswer">
-				<h2 id="answer">  </h2>
+			<div>
+				<canvas id="game" width="800" height="490"></canvas>
+			</div>
+			<div class="flexboxHeader">
+				<div class="scoreContainer" >
+					<h2 id='userDisplay'></h2>
+				</div>
+				<div class="scoreContainer" >
+					<h2 id='highscore'></h2>
+				</div>
 			</div>
 		</div>
 		<main>
 			<section>
-				<div class="flexboxMap">
-					<canvas id="game" width="800" height="490"></canvas>
-				</div>
-
-				<div id="progressBar">
+				<div id="progressBar" style="display:none">
 						<div class="bar">
-							<img src="pig.png" alt="Italian Trulli">
 						</div>
 				</div>
 

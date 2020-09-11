@@ -4,8 +4,8 @@
 
 body {
     margin: 0;
-    --nav-load-time: 3000ms;
-    --nav-link-load-time: 1500ms;
+    --nav-load-time: 2000ms;
+    --nav-link-load-time: 1000ms;
 }
 
 nav {
@@ -15,8 +15,6 @@ nav {
 }
 
 nav h1 {
-    font-family: 'Grenze Gotisch', cursive;
-    font-size: 50px;
     display: flex;
     justify-content: center;
     margin: 0 10px;
@@ -104,6 +102,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin: 10px;
 
 }
@@ -112,6 +111,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
+}
+
+.scoreContainer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    width: 300px;
+    margin: 10px;
+    border: 3px solid rgb(3, 8, 10);
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+
 }
 
 .containerQuestion {
@@ -120,7 +132,7 @@ main {
     width: 300px;
     margin: 10px;
     border: 3px solid rgb(3, 8, 10);
-    background-color: rgb(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     justify-content: center;
 
@@ -132,7 +144,7 @@ main {
     width: 300px;
     margin: 10px;
     border: 3px solid rgb(3, 8, 10);
-    background-color: rgb(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     justify-content: center;
 }
@@ -154,7 +166,7 @@ main {
     width: 30px;
     height: 30px;
     position: relative;
-    border: 4px solid #Fff;
+    border: 4px solid rgba(255, 255, 255, 0.75);
     animation: loader 2s infinite ease;
   }
 
@@ -163,24 +175,19 @@ main {
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.424);
     animation: loader-inner 2s infinite ease-in;
 }
 
 .grandParentContaniner {
     display: flex;
     justify-content: center;
-
-}
-
-.field-has-addons {
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    margin: 300px;
-    border: 5px solid rgb(3, 8, 10);
-    background-color: #dfdfdf;
-    border-radius: 5em;
+    width: 400px;
+    height: 250px;
+    margin: 200px;
+    border: 5px solid rgba(3, 8, 10, 0.582);
+    background-color: #5041196e;
+    border-radius: 2.5em;
 }
 
 
@@ -220,3 +227,22 @@ main {
     border-radius: 10em;
 }
 
+#username {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 40px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 0.25em;
+}
+
+#submit {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 0.25em;
+}

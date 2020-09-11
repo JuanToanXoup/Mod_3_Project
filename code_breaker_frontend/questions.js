@@ -48,12 +48,14 @@ const checkAns = ()=>{
         //increase score
         toggleMusic(`correct${rand}`)
         progress(getSeconds()+10, 120, $('#progressBar'));
+        score(getScore()+10,document.getElementById('score'));
         questionGen();
     }else if(submit == ''){
         return
     }else{
         toggleMusic(`wrong1`);
         progress(getSeconds()-10, 120, $('#progressBar'));
+        score(getScore()-2,document.getElementById('score'));
         console.log("Wrong Answer")
         ansReset();
     }

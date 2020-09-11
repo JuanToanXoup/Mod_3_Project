@@ -116,6 +116,7 @@ let toIndex = (x, y)=>{
 
 const loadGame = () => {
 	toggleElements();
+	score(0,document.getElementById('score'));
 	ctx = document.getElementById('game').getContext("2d");
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
