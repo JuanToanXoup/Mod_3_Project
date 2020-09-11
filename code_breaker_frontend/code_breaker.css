@@ -43,7 +43,6 @@ main {
     padding: 5px;
 }
 
-
 @keyframes nav-load {
     0% {
         transform: translateY(-100%);
@@ -168,6 +167,21 @@ main {
     animation: loader-inner 2s infinite ease-in;
 }
 
+.grandParentContaniner {
+    display: flex;
+    justify-content: center;
+
+}
+
+.field-has-addons {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: 300px;
+    border: 5px solid rgb(3, 8, 10);
+    background-color: #dfdfdf;
+    border-radius: 5em;
+}
 
 
 @keyframes loader {
