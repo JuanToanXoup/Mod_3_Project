@@ -15,6 +15,9 @@ class UsersController < ApplicationController
             user = User.new(user_params)
             user.save
         end
+        if user.username == ""
+            user = User.find_by(username: "Universal")
+        end
         render json: user, only: [:id, :username, :highscore, :avatar]
     end
 

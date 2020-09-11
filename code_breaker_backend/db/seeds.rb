@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 john = User.create(username: "juantoanxoup", highscore: 200)
+universal = User.create(username: "Universal", highscore: 0)
