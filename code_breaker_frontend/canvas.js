@@ -12,7 +12,7 @@ let gameMap = [
 let tileW = 80, tileH = 80;
 let mapW = 10, mapH = 6;
 let currentSecond = 0, frameCount = 0, framesLastSecond = 0, lastFrameTime = 0;
-let tileset = null, tilesetURL = "tileset6.png", tilesetLoaded = false;
+let tileset = null, tilesetURL = "tileset7.png", tilesetLoaded = false;
 
 let keysDown = {
 	37 : false, 38 : false, 39 : false,
@@ -45,6 +45,7 @@ let tileTypes = {
 	13 : { sprite:[{x:280,y:0,w:40,h:40}] },
 	14 : { sprite:[{x:320,y:0,w:40,h:40}] },
 	15 : { sprite:[{x:240,y:40,w:40,h:40}] },
+	16 : { sprite:[{x:260,y:40,w:40,h:40}] }
 };
 
 let directions = {
@@ -210,18 +211,7 @@ let drawGame = ()=> {
 		player.position[0],player.position[1],
 		player.dimensions[0], player.dimensions[1]
 	);
-
-	// ctx.fillStyle = "#0000ff";
-	// ctx.fillRect(player.position[0], player.position[1],
-	// 	player.dimensions[0], player.dimensions[1]);
-	// ctx.fillStyle = "#DF22F9 ";
-	// ctx.fillRect(player2.position[0], player2.position[1],
-	// 	player2.dimensions[0], player2.dimensions[1]);
-
-	// ctx.fillStyle = "#ff0000";
-	// ctx.fillText("FPS: " + framesLastSecond, 10, 20);
-
-
+	
 	lastFrameTime = currentFrameTime;
 	requestAnimationFrame(drawGame);
 

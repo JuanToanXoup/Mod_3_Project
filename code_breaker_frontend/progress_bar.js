@@ -10,7 +10,7 @@ const progress = (timeleft, timetotal, $element)=>{
         }, 1000);
     }
     else{
-        alert("I guess you couldn't break the code pweny human <[0_0]<")
+        alert("You ran out of money on your quest and died of disentary <[0_0]<")
         setHighscore();
     }
 };
