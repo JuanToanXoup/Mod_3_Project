@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users, only: [:id,:username, :avatar]
+        render json: users, only: [:id, :username, :highscore, :avatar]
     end
 
     def show
         user = find_user
-        render json: user, only: [:id,:username, :avatar]
+        render json: user, only: [:id, :username, :highscore, :avatar]
     end
 
     def create
@@ -15,9 +15,14 @@ class UsersController < ApplicationController
             user = User.new(user_params)
             user.save
         end
-        render json: user, only: [:id,:username, :avatar]
+        render json: user, only: [:id, :username, :highscore, :avatar]
     end
 
+    def update
+        user = find_user
+        user.update(user_params)
+        render json: user, only: [:id, :username, :highscore, :avatar]
+    end
     private
 
     def find_user
@@ -25,7 +30,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username,:avatar)
+        params.require(:user).permit(:username, :highscore, :avatar)
     end
 
 end

@@ -116,6 +116,7 @@ let toIndex = (x, y)=>{
 
 const loadGame = () => {
 	toggleElements();
+	score(0,document.getElementById('score'));
 	ctx = document.getElementById('game').getContext("2d");
 	requestAnimationFrame(drawGame);
 	ctx.font = "bold 10pt sans-serif";
@@ -226,23 +227,24 @@ let drawGame = ()=> {
 
 	if (keysDown[32]){
 		const position = gameMap[toIndex(player.tileFrom[0],player.tileFrom[1])]
+		let rand = Math.floor(Math.random() * 3) + 1 
 		switch(position)
 		{
-			case 0: holdNum = 0; console.log(0); break;
-			case 1: holdNum = 1; console.log(1); break;
-			case 2: holdNum = 2; console.log(2); break;
-			case 3: holdNum = 3; console.log(3); break;
-			case 4: holdNum = 4; console.log(4); break;
-			case 5: holdNum = 5; console.log(5); break;
-			case 6: holdNum = 6; console.log(6); break;
-			case 7: holdNum = 7; console.log(7); break;
-			case 8: holdNum = 8; console.log(8); break;
-			case 9: holdNum = 9; console.log(9); break;
-			case 11: ansReset(); console.log("RESET"); break;
-			case 13: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
-			case 14: if(holdNum != null){answerBox.innerText += holdNum;} holdNum = null; break;
-			case 12: checkAns();
-			case 15: holdNum = "-"; break;
+			case 0: holdNum = 0; toggleMusic(`key${rand}`); break;
+			case 1: holdNum = 1; toggleMusic(`key${rand}`); break;
+			case 2: holdNum = 2; toggleMusic(`key${rand}`); break;
+			case 3: holdNum = 3; toggleMusic(`key${rand}`); break;
+			case 4: holdNum = 4; toggleMusic(`key${rand}`); break;
+			case 5: holdNum = 5; toggleMusic(`key${rand}`); break;
+			case 6: holdNum = 6; toggleMusic(`key${rand}`); break;
+			case 7: holdNum = 7; toggleMusic(`key${rand}`); break;
+			case 8: holdNum = 8; toggleMusic(`key${rand}`); break;
+			case 9: holdNum = 9; toggleMusic(`key${rand}`); break;
+			case 11: ansReset(); toggleMusic(`reset`); break;
+			case 13: if(holdNum != null){answerBox.innerText += holdNum; toggleMusic(`dropkey1`)}; holdNum = null; break;
+			case 14: if(holdNum != null){answerBox.innerText += holdNum; toggleMusic(`dropkey2`)}; holdNum = null; break;
+			case 12: checkAns(); break;
+			case 15: holdNum = "-"; toggleMusic(`key${rand}`); break;
 			default: break;
 		}
 	}
