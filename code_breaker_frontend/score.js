@@ -13,7 +13,6 @@ const getScore = ()=>{
 }
 
 const setHighscore = ()=>{
-    debugger
     if (getScore() > Number(localStorage.highscore)) {
         fetch(`http://localhost:3000/users/${localStorage.id}`, {
             method: 'PATCH',

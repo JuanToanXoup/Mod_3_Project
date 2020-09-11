@@ -68,5 +68,6 @@ const skipQuest = ()=> {
 
 const reset = ()=>{
     progress(120, 120, $('#progressBar'));
+    score(0,document.getElementById('score'));
     questionGen();
 }
